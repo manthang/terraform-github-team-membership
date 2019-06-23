@@ -11,7 +11,8 @@ Create members of an Github organization, using this resource: https://www.terra
 Add the members along with their roles into teams, using this resource: https://www.terraform.io/docs/providers/github/r/team_membership.html
 
 ---
-This implements the following matrix: 
+This implements the following matrix.
+Note: Empty spaces represent the user is not a member of the team.
 
 | Username | Team1 | Team2 | Team3 | Team4 | Team5 | Team6 |
 |----------|-------|-------|-------|-------|-------|-------|
@@ -26,6 +27,5 @@ This implements the following matrix:
 |User9 | member | member |  | member | member | member |
 |User10 | member | member |  | member | member | member |
 
-Note: Empty spaces represent the user is not a member of the team.
 ---
 Compatibility: Terraform 0.11 and ealier. 
