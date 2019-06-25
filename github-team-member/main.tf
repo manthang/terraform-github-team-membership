@@ -13,5 +13,5 @@ resource "github_team_membership" "this" {
   team_id  = "${data.github_team.this.*.id[count.index]}"
   username = "${var.username}"
   role     = "${lookup(var.teams[count.index], "role_team", "member")}"
+  depends_on = ["github_membership.this"]
 }
-

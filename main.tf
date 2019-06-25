@@ -1,5 +1,5 @@
 # Create teams
-module "our-teams" {
+module "teams" {
   source  = "./github-teams"
 
   teams = [
@@ -24,11 +24,13 @@ module "our-teams" {
   ]
 }
 
-module "github-team-member" {
+module "team-membership" {
   source = "./github-team-member"
   
   username  = "user1"
   role_org  = "admin"
+
+  depend_getter = "${module.our-teams.depend_setter}"
 
   teams = [
     {
